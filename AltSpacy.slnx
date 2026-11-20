@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/AltSpacy/AltSpacy.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/AltSpacy.Tests/AltSpacy.Tests.csproj" />
+  </Folder>
+</Solution>

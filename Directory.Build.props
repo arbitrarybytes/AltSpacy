@@ -1,0 +1,8 @@
+<Project>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <!-- Release exes embed their PDB: store source paths as /_/src/... instead of the build machine's folders
+         (which would include its user name). Works with or without git. -->
+    <PathMap>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))=/_/</PathMap>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+</Project>
