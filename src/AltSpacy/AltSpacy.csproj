@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+
+    <!-- Semantic version: MAJOR.MINOR.PATCH. Bump MINOR for features, PATCH for fixes. -->
+    <Version>1.5.0</Version>
+    <!-- ThemeMode (Windows 11 Fluent theme for Settings/About) is marked experimental in WPF. -->
+    <NoWarn>$(NoWarn);WPF0001</NoWarn>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+    <Product>AltSpacy</Product>
+    <Authors>Vaibhav Sharma</Authors>
+    <Copyright>Copyright © 2026 Vaibhav Sharma</Copyright>
+    <Description>Keyboard launcher for Windows: open sites with short keys, run any Windows tool or setting by name.</Description>
+    <ApplicationIcon Condition="Exists('Assets\AltSpacy.ico')">Assets\AltSpacy.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Using Remove="System.Windows.Forms" />
+    <Using Remove="System.Drawing" />
+    <EmbeddedResource Include="shortcuts.default.json" LogicalName="AltSpacy.shortcuts.default.json" />
+    <InternalsVisibleTo Include="AltSpacy.Tests" />
+  </ItemGroup>
+
+</Project>

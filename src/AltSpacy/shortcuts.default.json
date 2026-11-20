@@ -1,0 +1,35 @@
+{
+  // Global hotkey that opens the bar. Modifiers: Ctrl, Alt, Shift, Win. Key: a WPF Key name (Space, O, F1, ...).
+  "hotkey": "Alt+Space",
+
+  // Program used to open URLs, e.g. "msedge" or a full path. Empty = the Windows default browser.
+  "browser": "",
+
+  // Type a key, a space, then the value:  g weather   gh altspacy   pr dotnet/runtime 1190
+  //   {q}       value without surrounding quotes, URL-encoded
+  //   {raw}     value exactly as typed, URL-encoded
+  //   {project} first word if it is an alias below (or an owner/repo path), else the shortcut's "defaultProject"
+  //   prefixIfNumeric  added to digits-only values, e.g. "PROJ-" makes  j 41  open PROJ-41
+  //   icon      optional image URL or file path; defaults to the site's favicon
+  // URLs must start with http:// or https://. Changes are picked up automatically on save.
+
+  // Short names for repositories, used by {project}:  "runtime": "dotnet/runtime"  ->  pr runtime 1190
+  "projects": {},
+
+  "shortcuts": [
+    { "key": "g",   "description": "Google search",          "url": "https://www.google.com/search?q={q}" },
+    { "key": "gh",  "description": "GitHub search",          "url": "https://github.com/search?q={q}" },
+    { "key": "pr",  "description": "Pull request",           "url": "https://github.com/{project}/pull/{q}" },
+    { "key": "gc",  "description": "Commit",                 "url": "https://github.com/{project}/commit/{q}" },
+    { "key": "gb",  "description": "Branch",                 "url": "https://github.com/{project}/tree/{q}" },
+    { "key": "ga",  "description": "Actions",                "url": "https://github.com/{project}/actions" },
+    { "key": "so",  "description": "Stack Overflow search",  "url": "https://stackoverflow.com/search?q={q}" },
+    { "key": "w",   "description": "Wikipedia",              "url": "https://en.wikipedia.org/wiki/Special:Search?search={q}" },
+    { "key": "yt",  "description": "YouTube search",         "url": "https://www.youtube.com/results?search_query={q}" }
+
+    // Work tools: copy a line above the closing bracket, add a comma, and use your company's host.
+    // { "key": "j",  "description": "Jira issue",        "url": "https://your-company.atlassian.net/browse/{q}", "prefixIfNumeric": "PROJ-" },
+    // { "key": "c",  "description": "Confluence search", "url": "https://your-company.atlassian.net/wiki/search?text={q}" },
+    // { "key": "mr", "description": "Merge request",     "url": "https://gitlab.your-company.com/{project}/-/merge_requests/{q}" }
+  ]
+}
